@@ -68,7 +68,7 @@ func (dispatcher *Dispatcher) Go(event interface{}, parameters ...interface{}) (
 			resolver(iterate[typing].(string), iterate[perform], iterate[arguments].([]interface{}))
 		}
 	} else {
-		panic(fmt.Sprintf(eventNotExist, subscriber))
+		return nil
 	}
 	return
 }
